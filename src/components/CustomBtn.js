@@ -30,7 +30,9 @@ function CustomBtn(props) {
     const {txt, link} = props;
     return (
         <div>
-            <StyledButton variant="contained"><a href={link}>{txt}</a></StyledButton>
+            <StyledButton variant="contained">
+                <Link to={{pathname: link}} target="">{txt}</Link>
+            </StyledButton>
         </div>
     )
 }
