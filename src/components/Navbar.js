@@ -41,15 +41,12 @@ const styles = makeStyles({
 function Navbar() {
     const classes = styles()
     return(
-        <Toolbar position="sticky" color="rgba(0,0,0,0.87)" className={classes.bar}>
+        <Toolbar position="sticky" color="rgba(200,0,0,7)" className={classes.bar}>
             <img src={logo} className={classes.logo} />
             <img src={logoMobile} className={classes.logoMobile}/>
             <Typography variant="h6" className={classes.menuItem}>
                 <Link to="/">Home</Link>
             </Typography>
-            <Typography variant="h6" className={classes.menuItem}>
-                <Link to="/about">About</Link>
-                </Typography>
             <Typography variant="h6" className={classes.menuItem}>
                 <Link to="/blog">Blog</Link>
             </Typography>

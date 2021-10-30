@@ -13,7 +13,7 @@ const StyledButton = withStyles({
         boxSizing: "border-box",
         borderRadius: 0,
         background: "#d65151",
-        color: "#d65151",
+        color: "#000",
         transform: "none",
         boxShadow: "6px 6px 0 0 #913737",
         transition: "background .3s,border-color .3s,collor .3s",
@@ -30,9 +30,11 @@ function CustomBtn(props) {
     const {txt, link} = props;
     return (
         <div>
+            <Link to={{pathname: link}} target="">
             <StyledButton variant="contained">
-                <Link to={{pathname: link}} target="">{txt}</Link>
+                {txt}
             </StyledButton>
+            </Link>
         </div>
     )
 }

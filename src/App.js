@@ -8,7 +8,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import  InstagramIcon from '@material-ui/icons/Instagram';
 import  TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import  DocIcon from '@material-ui/icons/Description';
-import  HttpIcon from '@material-ui/icons/Http';
+import  YoutubeIcon from '@material-ui/icons/YouTube';
+import HttpIcon from '@material-ui/icons/Http'
 import { Typography } from '@material-ui/core';
 import { Document, Page } from 'react-pdf';
 
@@ -82,7 +83,7 @@ function App() {
             <div className={`${classes.grid} ${classes.bigSpace}`}>
               <Grid icon={<GitHubIcon style={{fill: "#0", height:"125", width:"125"}}/>} title="My Github" btnTitle="Take me there!" link="/github"/>
               <Grid icon={<InstagramIcon style={{fill: "#bc2a8d", height:"125", width:"125"}}/>} title="@CameronJHarrison" btnTitle="Show me!" link="/insta"/>
-              <Grid icon={<TrendingUpIcon style={{fill: "#70d424", height:"125", width:"125"}}/>} title="Stonks" btnTitle="To the Moon!" link="/stonk"/>
+              <Grid icon={<YoutubeIcon style={{fill: "#c4302b", height:"125", width:"125"}}/>} title="A cool video" btnTitle="(Banger)" link="/video"/>
             </div>
             <div className={`${classes.grid} ${classes.littleSpace}`}>
               <Grid icon={<DocIcon style={{fill: "#305ec2", height:"125", width:"125"}}/>} title="Resume" btnTitle="Show me More" link="/cv"/>
@@ -117,6 +118,7 @@ function App() {
             </Route>
             <Route path="/github" component={() => {window.location.href = 'https://github.com/cambo602';return null;}}></Route>
             <Route path="/insta" component={() => {window.location.href = 'https://www.instagram.com/cameronjharrison/';return null;}}></Route>
+            <Route path="/video" component={() => {window.location.href = 'https://www.youtube.com/watch?v=ZEcqHA7dbwM&ab_channel=FrankSinatra-Topic';return null;}}></Route>
           </switch>
       </ThemeProvider>
     </div>
