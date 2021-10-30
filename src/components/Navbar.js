@@ -1,27 +1,27 @@
 import React from 'react'
 import CustomBtn from './CustomBtn'
-import logo from '../logo (1).svg'
-import logoMobile from '../logoMobile.svg'
+import logo from '../uottawa.png'
+import logoMobile from '../uottawa.png'
 import {Toolbar, Typography} from "@material-ui/core"
 import {makeStyles} from "@material-ui/core/styles"
 import { Link } from 'react-router-dom';
 
 const styles = makeStyles({
     bar:{
-        paddingTop: "1.15rem",
+        paddingTop: "1rem",
         backgroundColor: "#fff",
         ['@media (max-width:780px)']: {
             flexDirection: "column"
         }
     },
     logo:{
-        width: "15%",
+        width: "10%",
         ['@media (max-width:780px)']: {
             display: "none"
         }
     },
     logoMobile:{
-        width: "100%",
+        width: "60%",
         display: "none",
         ['@media (max-width:780px)']: {
             display: "inline-block"
