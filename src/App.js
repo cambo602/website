@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { Route, BrowserRouter as Router} from 'react-router-dom';
@@ -11,6 +11,7 @@ import  DocIcon from '@material-ui/icons/Description';
 import  ComputerIcon from '@material-ui/icons/Computer';
 import  HttpIcon from '@material-ui/icons/Http';
 import { Typography } from '@material-ui/core';
+import { Document, Page } from 'react-pdf';
 
 const styles = makeStyles({
   wrapper: {
@@ -42,6 +43,8 @@ const theme = createTheme({
     },
   },
   typography: {
+    alignItems: "center",
+    justifyContent: "center",
     fontFamily: [
       'Roboto'
     ],
@@ -57,8 +60,15 @@ const theme = createTheme({
   }
 });
 
+
+
 function App() {
   const classes = styles();
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber] = useState(1);
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
   return (
     <Router>
     <div className="App">
@@ -66,6 +76,9 @@ function App() {
           <Navbar/>
           <switch>
             <Route exact path="/">
+            <div className={classes.typography} variant="h4">
+              This is my website!
+            </div>
             <div className={`${classes.grid} ${classes.bigSpace}`}>
               <Grid icon={<GitHubIcon style={{fill: "#0", height:"125", width:"125"}}/>} title="My Github" btnTitle="Take me there!" link="/github"/>
               <Grid icon={<InstagramIcon style={{fill: "#bc2a8d", height:"125", width:"125"}}/>} title="@CameronJHarrison" btnTitle="Show me!" link="/insta"/>
@@ -91,7 +104,10 @@ function App() {
               
             </Route>
             <Route path="/cv">
-              
+              <Document file="./Cameron_Resume" onLoadSuccess={onDocumentLoadSuccess}>
+                <Page pageNumber={pageNumber} />
+              </Document>
+              <p>Page {pageNumber} of {numPages}</p>
             </Route>
             <Route path="/contact">
               

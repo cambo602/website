@@ -12,13 +12,13 @@ const StyledButton = withStyles({
         padding: "0 25px",
         boxSizing: "border-box",
         borderRadius: 0,
-        background: "#4f25f7",
-        color: "#fff",
+        background: "#d65151",
+        color: "#d65151",
         transform: "none",
-        boxShadow: "6px 6px 0 0 #c7d8ed",
+        boxShadow: "6px 6px 0 0 #913737",
         transition: "background .3s,border-color .3s,collor .3s",
         "&:hover":{
-            backgroundColor: "#4f25f7"
+            backgroundColor: "#913737"
         },
     },
     label: {

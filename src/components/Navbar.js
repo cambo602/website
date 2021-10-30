@@ -45,7 +45,7 @@ function Navbar() {
             <img src={logo} className={classes.logo} />
             <img src={logoMobile} className={classes.logoMobile}/>
             <Typography variant="h6" className={classes.menuItem}>
-                <Link to="/">Home</Link>
+                <Link to="/cv">Home</Link>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>
                 <Link to="/about">About</Link>
