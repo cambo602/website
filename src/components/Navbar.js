@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const styles = makeStyles({
     bar:{
         paddingTop: "1rem",
-        backgroundColor: "#fff",
+        backgroundColor: "#747982",
         ['@media (max-width:780px)']: {
             flexDirection: "column"
         }

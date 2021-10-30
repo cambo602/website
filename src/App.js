@@ -35,7 +35,7 @@ grid: {
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#2e1667",
+      main: "#000",
     },
     secondary: {
       main: "#c7d8ed",
@@ -66,6 +66,7 @@ function App() {
     setNumPages(numPages);
   }
   return (
+    <div style={{backgroundColor: '#747982'}}>
     <Router>
     <div className="App">
       <ThemeProvider theme={theme}>
@@ -123,6 +124,7 @@ function App() {
       </ThemeProvider>
     </div>
    </Router>
+   </div>
   );
 }
 
