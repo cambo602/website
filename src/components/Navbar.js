@@ -44,6 +44,7 @@ function Navbar() {
         <Toolbar position="sticky" color="rgba(200,0,0,7)" className={classes.bar}>
             <img src={logo} className={classes.logo} />
             <img src={logoMobile} className={classes.logoMobile}/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Typography variant="h6" className={classes.menuItem}>
                 <Link to="/">Home</Link>
             </Typography>

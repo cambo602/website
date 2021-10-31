@@ -12,6 +12,7 @@ import  YoutubeIcon from '@material-ui/icons/YouTube';
 import HttpIcon from '@material-ui/icons/Http'
 import { Typography } from '@material-ui/core';
 import { Document, Page } from 'react-pdf';
+import file from './Cameron_Resume.pdf'
 
 const styles = makeStyles({
   wrapper: {
@@ -60,11 +61,7 @@ const theme = createTheme({
 });
 function App() {
   const classes = styles();
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber] = useState(1);
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+
   return (
     <div style={{backgroundColor: '#747982'}}>
     <Router>
@@ -95,10 +92,10 @@ function App() {
             <Route path="/about">
               <div className={classes.wrapper}>
               <Typography variant="h4" className={classes.bigSpace} color="primary">
-                I am become death destroyer of worlds
+                I am Cameron. I am a first year university student at the University of Ottawa.
               </Typography>
               <Typography variant="h5" className={classes.littleSpace} color="primary">
-                Something equally edgy, woohoo super lomg sentances to show off how cool this section of the website is i will continue typing for at least the next serveral chars
+                I will soon type something else here, but I dont really feel like it right now.
               </Typography>
               </div>
             </Route>
@@ -106,10 +103,9 @@ function App() {
               
             </Route>
             <Route path="/cv">
-              <Document file="./Cameron_Resume" onLoadSuccess={onDocumentLoadSuccess}>
-                <Page pageNumber={pageNumber} />
-              </Document>
-              <p>Page {pageNumber} of {numPages}</p>
+            <Document file={file}>
+      <Page pageNumber={1} />
+    </Document>
             </Route>
             <Route path="/contact">
               
