@@ -63,7 +63,7 @@ function App() {
   const classes = styles();
 
   return (
-    <div style={{backgroundColor: '#747982'}}>
+    <div style={{backgroundColor: '#fff'}}>
     <Router>
     <div className="App">
       <ThemeProvider theme={theme}>
